@@ -20,9 +20,9 @@ int VETOR_MATRIZ_VOOS_setCenarioAleatorio(VETOR_MATRIZ_VOOS *vetor, int numMatri
     //vetor->indicesSorteados=malloc(n*sizeof(int));
     vetor->numElementos=n;
 
-    for(int i=0; i<n; i++){
+	int count=0;
 
-        int count=0;
+    for(int i=0; i<n; i++){
 		
         MATRIZ_VOOS_inicializa(&(vetor->vetorBubbleSort[i]));
 		MATRIZ_VOOS_inicializa(&(vetor->vetorSelectionSort[i]));
@@ -119,8 +119,154 @@ int VETOR_MATRIZ_VOOS_setCenarioAleatorio(VETOR_MATRIZ_VOOS *vetor, int numMatri
 
     return 0;
 }
-int VETOR_MATRIZ_VOOS_setCenarioArquivo(VETOR_MATRIZ_VOOS *vetor, FILE *arquivo){
-	//VINICIUS, PROGRAME AQUI DENTRO A LEITURA DE ARQUIVO! DEPOIS BASTA APENAS CHAMAR ESSA FUNÇÃO NO MAIN!
+int VETOR_MATRIZ_VOOS_setCenarioArquivo(VETOR_MATRIZ_VOOS *vetor, FILE *arquivo, int n, int numMatrizes, int numVoos){
+
+	vetor->vetorBubbleSort=malloc(n*sizeof(MATRIZ_VOOS));
+	vetor->vetorSelectionSort=malloc(n*sizeof(MATRIZ_VOOS));
+	vetor->vetorInsertionSort=malloc(n*sizeof(MATRIZ_VOOS));
+	vetor->vetorShellSort=malloc(n*sizeof(MATRIZ_VOOS));
+	vetor->vetorQuickSort=malloc(n*sizeof(MATRIZ_VOOS));
+	vetor->vetorHeapSort=malloc(n*sizeof(MATRIZ_VOOS));
+	vetor->numElementos=n;
+
+	char opcaoArquivo;
+
+	for(int i=0; i<numMatrizes; i++){
+		do{
+			fscanf(arquivo,"%c", &opcaoArquivo);
+			printf("%c", opcaoArquivo);
+		}while(opcaoArquivo!='\n');
+	}
+
+	// horario *horarioDecolagem=malloc(sizeof(horario));
+	// horario *horarioPouso=malloc(sizeof(horario));
+
+	// int idpd=7;
+	
+	// char pistaDecolagem[30];
+	// char pistaPouso[30];
+
+	// fscanf(arquivo, "%d:%d %d:%d %s %s %d", &(horarioDecolagem->hora), &(horarioDecolagem->min), &(horarioPouso->hora), &(horarioPouso->min), pistaDecolagem, pistaPouso, &idpd);
+
+	// printf("%d:%d %d:%d %s %s %d", horarioDecolagem->hora, horarioDecolagem->min, horarioPouso->hora, horarioPouso->min, pistaDecolagem, pistaPouso, idpd);
+
+	// fscanf(arquivo, "%d:%d %d:%d %s %s %d", &(horarioDecolagem->hora), &(horarioDecolagem->min), &(horarioPouso->hora), &(horarioPouso->min), pistaDecolagem, pistaPouso, &idpd);
+
+	// printf("%d:%d %d:%d %s %s %d", horarioDecolagem->hora, horarioDecolagem->min, horarioPouso->hora, horarioPouso->min, pistaDecolagem, pistaPouso, idpd);
+
+	int count=0;
+
+	for(int i=0; i<n; i++){
+		
+        MATRIZ_VOOS_inicializa(&(vetor->vetorBubbleSort[i]));
+		MATRIZ_VOOS_inicializa(&(vetor->vetorSelectionSort[i]));
+		MATRIZ_VOOS_inicializa(&(vetor->vetorInsertionSort[i]));
+		MATRIZ_VOOS_inicializa(&(vetor->vetorShellSort[i]));
+		MATRIZ_VOOS_inicializa(&(vetor->vetorQuickSort[i]));
+		MATRIZ_VOOS_inicializa(&(vetor->vetorHeapSort[i]));
+        // printf("/////////// %d ///////////////", vetor->vetorOriginal[i].IDMatrizVoos);
+        if(count<numMatrizes){
+            for(int j=0; j<numVoos; j++){
+
+                horario *horarioDecolagem=malloc(sizeof(horario));
+				horario *horarioPouso=malloc(sizeof(horario));
+
+				int idpd=7;
+
+				char pistaDecolagem[30];
+				char pistaPouso[30];
+
+				fscanf(arquivo, "%d:%d %d:%d %s %s %d", &(horarioDecolagem->hora), &(horarioDecolagem->min), &(horarioPouso->hora), &(horarioPouso->min), pistaDecolagem, pistaPouso, &idpd);
+
+				//printf("----------------%d--------------\n", (count*j));
+
+				//printf("%d:%d %d:%d %s %s %d\n", horarioDecolagem->hora, horarioDecolagem->min, horarioPouso->hora, horarioPouso->min, pistaDecolagem, pistaPouso, idpd);
+
+                VOO *vooBubbleSort=malloc(sizeof(VOO));
+				VOO *vooSelectionSort=malloc(sizeof(VOO));
+				VOO *vooInsertionSort=malloc(sizeof(VOO));
+				VOO *vooShellSort=malloc(sizeof(VOO));
+				VOO *vooQuickSort=malloc(sizeof(VOO));
+				VOO *vooHeapSort=malloc(sizeof(VOO));
+
+                VOO_inicializa(vooBubbleSort);
+				VOO_inicializa(vooSelectionSort);
+				VOO_inicializa(vooInsertionSort);
+				VOO_inicializa(vooShellSort);
+				VOO_inicializa(vooQuickSort);
+				VOO_inicializa(vooHeapSort);
+
+                VOO_setHorarioDecolagem(vooBubbleSort, horarioDecolagem);
+                VOO_setHorarioPouso(vooBubbleSort, horarioPouso);
+
+				VOO_setHorarioDecolagem(vooSelectionSort, horarioDecolagem);
+                VOO_setHorarioPouso(vooSelectionSort, horarioPouso);
+
+				VOO_setHorarioDecolagem(vooInsertionSort, horarioDecolagem);
+                VOO_setHorarioPouso(vooInsertionSort, horarioPouso);
+
+				VOO_setHorarioDecolagem(vooShellSort, horarioDecolagem);
+                VOO_setHorarioPouso(vooShellSort, horarioPouso);
+
+				VOO_setHorarioDecolagem(vooQuickSort, horarioDecolagem);
+                VOO_setHorarioPouso(vooQuickSort, horarioPouso);
+
+				VOO_setHorarioDecolagem(vooHeapSort, horarioDecolagem);
+                VOO_setHorarioPouso(vooHeapSort, horarioPouso);
+
+                VOO_setIdentificadorPistaDecolagem(vooBubbleSort, idpd);
+				VOO_setIdentificadorPistaDecolagem(vooSelectionSort, idpd);
+				VOO_setIdentificadorPistaDecolagem(vooInsertionSort, idpd);
+				VOO_setIdentificadorPistaDecolagem(vooShellSort, idpd);
+				VOO_setIdentificadorPistaDecolagem(vooQuickSort, idpd);
+				VOO_setIdentificadorPistaDecolagem(vooHeapSort, idpd);
+
+				VOO_setAeroportoDecolagem(vooBubbleSort, pistaDecolagem);
+				VOO_setAeroportoPouso(vooBubbleSort, pistaPouso);
+
+				VOO_setAeroportoDecolagem(vooSelectionSort, pistaDecolagem);
+				VOO_setAeroportoPouso(vooSelectionSort, pistaPouso);
+
+				VOO_setAeroportoDecolagem(vooInsertionSort, pistaDecolagem);
+				VOO_setAeroportoPouso(vooInsertionSort, pistaPouso);
+
+				VOO_setAeroportoDecolagem(vooShellSort, pistaDecolagem);
+				VOO_setAeroportoPouso(vooShellSort, pistaPouso);
+
+				VOO_setAeroportoDecolagem(vooQuickSort, pistaDecolagem);
+				VOO_setAeroportoPouso(vooQuickSort, pistaPouso);
+
+				VOO_setAeroportoDecolagem(vooHeapSort, pistaDecolagem);
+				VOO_setAeroportoPouso(vooHeapSort, pistaPouso);
+
+                //VOO_showVoo(voo);
+                MATRIZ_VOOS_setVoo(&(vetor->vetorBubbleSort[i]), vooBubbleSort);
+				MATRIZ_VOOS_setVoo(&(vetor->vetorSelectionSort[i]), vooSelectionSort);
+				MATRIZ_VOOS_setVoo(&(vetor->vetorInsertionSort[i]), vooInsertionSort);
+				MATRIZ_VOOS_setVoo(&(vetor->vetorShellSort[i]), vooShellSort);
+				MATRIZ_VOOS_setVoo(&(vetor->vetorQuickSort[i]), vooQuickSort);
+				MATRIZ_VOOS_setVoo(&(vetor->vetorHeapSort[i]), vooHeapSort);
+				
+            }
+            count++;
+        }
+    }
+
+	// char opcaoArquivo;
+	// while(!feof(arquivo)){
+	// 	int count=0;
+	// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+	// 	fscanf(arquivo,"%c", &opcaoArquivo);
+	// 	if(count>numMatrizes){
+	// 		if(opcaoArquivo!='\n'){
+	// 			printf("%c", opcaoArquivo);
+	// 		}
+	// 	}
+	// 	count++;
+	// }
+
+	return 0;	
+	
 }
 
 int VETOR_MATRIZ_VOOS_bubbleSort(VETOR_MATRIZ_VOOS *vetor){

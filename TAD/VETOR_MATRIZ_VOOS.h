@@ -21,7 +21,7 @@ typedef struct{
 //Gera um vetor preenchido aleatpriamente
 int VETOR_MATRIZ_VOOS_setCenarioAleatorio(VETOR_MATRIZ_VOOS *vetor, int numMatrizes, int numVoos, int n);
 //Gera um vetor preencido com os dados de um arquivo
-int VETOR_MATRIZ_VOOS_setCenarioArquivo(VETOR_MATRIZ_VOOS *vetor, FILE *arquivo);
+int VETOR_MATRIZ_VOOS_setCenarioArquivo(VETOR_MATRIZ_VOOS *vetor, FILE *arquivo, int n, int numMatrizes, int numVoos);
 
 int VETOR_MATRIZ_VOOS_bubbleSort(VETOR_MATRIZ_VOOS *vetor);
 int VETOR_MATRIZ_VOOS_selectionSort(VETOR_MATRIZ_VOOS *vetor);

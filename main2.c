@@ -55,6 +55,10 @@ int main(){
 	//Definindo input padrão, caso a pessoa não digite nada e criando a variável em si
 	char input = ' ';
 
+	char swapString[50];
+
+	char opcaoArquivo;
+
 	//Definindo retorno padrão de funções como erro
 	int retorno = 1;
 
@@ -120,7 +124,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 365, 73, 10);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			
 			break;
@@ -140,7 +169,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 365, 365, 10);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 
 			break;
@@ -160,7 +214,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 365, 73, 100);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			break;
 
@@ -179,7 +258,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 365, 365, 100);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 
 			break;
@@ -199,7 +303,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 3650, 730, 10);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 
 			break;
@@ -219,7 +348,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 3650, 3650, 10);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 
 			break;
@@ -239,7 +393,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 3650, 73, 100);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 
 		break;
@@ -258,7 +437,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 3650, 3650, 100);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			break;
 
@@ -276,7 +480,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 36500, 7300, 10);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			break;
 
@@ -294,7 +523,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 36500, 36500, 10);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			break;
 
@@ -312,7 +566,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 36500, 7300, 100);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			break;
 
@@ -330,7 +609,32 @@ int main(){
 				VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
 
 			}else if(modoArquivo==1){
+				printf("Digite o nome do arquivo e a extensao. Exemplo TESTE.txt : ");
+
+				scanf("%s",swapString);
 				//VINICIUS!!!MODO ARQUIVO DE ARQUIVO É AQUI! FAÇA O CÓDIGO DE LEITURA DE ARQUIVO NA FUNÇÃO "VOO_setCenarioArquivo". APENAS CHAME ESSA FUNÇÃO AQUI!
+
+				if((arquivo = fopen(swapString, "r"))==NULL){
+				printf("Arquivo nao encontrado. Tente novamente mais tarde.\n");
+
+
+				} else {
+					VETOR_MATRIZ_VOOS_setCenarioArquivo(&vetorMatrizVoos, arquivo, 36500, 36500, 1000);
+					VETOR_MATRIZ_VOOS_bubbleSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_selectionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_insertionSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_shellSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_quickSort(&vetorMatrizVoos);
+					VETOR_MATRIZ_VOOS_heapSort(&vetorMatrizVoos);
+					// //Percorrendo todo o arquivo com um while
+					// while(!feof(arquivo)){
+					// 	//Pegando o primeiro caractere de cada linha do arquivo e armazenando numa varíavel de area de troca
+					// 	fscanf(arquivo,"%c", &opcaoArquivo);
+					// 	if(opcaoArquivo!='\n'){
+					// 		printf("%c", opcaoArquivo);
+					// 	}
+					// }	
+				}	
 			}
 			break;
 
